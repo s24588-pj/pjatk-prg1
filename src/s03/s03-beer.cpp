@@ -1,12 +1,9 @@
 #include <iostream>
+#include <string>
 
-
-int n;
-
-int main()
+auto main(int, char *argv[]) -> int
 {
-	std::cout << "Podaj liczbę butelek" << "\n";
-	std::cin >> n;
+	auto const n = std::stoi(argv[1]);
 	for(int i=n; i>0; i--)
 	{
 		std::cout << i <<" bottles of beer on the wall, "<< i <<" bottles of beer."<<"\n";

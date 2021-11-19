@@ -1,13 +1,11 @@
 #include <iostream>
+#include <string>
 
-int n;
-
-int main()
+auto main(int, char *argv[]) -> int
 {
-	std::cout << "Podaj zakres od 1 do n" << "\n";
-	std::cin >> n;
+	auto const n = std::stoi(argv[1]);
 	std::cout << "Podane n: " << n << "\n";
-	for(int i=1; i<=n; i++)
+	for(auto i=1; i<=n; i++)
 	{
 		if(i%3==0 && i%5==0)
 		{

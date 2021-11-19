@@ -1,26 +1,30 @@
 #include <iostream>
+#include <string>
 
-
-
-std::string pass;
-
-int main()
+auto ask(std::string prompt) -> std::string
 {
-	std::cout << "Enter your password" << "\n";
-	
-	while(pass!="student")
+    std::cout << prompt;
+    auto n = std::string{};
+    std::getline(std::cin ,n);
+    return n;
+}
+
+auto main(int, char *argv[]) -> int
+{
+	std::cout << "Please enter your password!"<< "\n";
+	auto pass = std::string(argv[1]);
+	auto cont = std::string{};
+	while(pass!= cont)
 	{
-		std::cout << "password: ";
-		std::cin >> pass;	
-		if(pass=="student")
+		cont = ask("Yours try: ");
+		if(pass==cont)
 		{
-			std::cout << "ok!" << "\n";
-		}	
+			std::cout << "Correct"<< "\n";
+		}
 		else
 		{
-			std::cout << "Try again" << "\n";
-		}
+			std::cout <<"Invalid Password"<< "\n";
+		}		
 	}
-	return 0 ;
-
+	return 0;
 }

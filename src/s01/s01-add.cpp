@@ -1,5 +1,6 @@
 #include <iostream> 
 #include <string>
+
 auto main(int, char* argv[]) -> int
 {
 	auto const a = std::stoi(argv[1]);

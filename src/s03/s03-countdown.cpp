@@ -1,11 +1,11 @@
 #include <iostream>
 #include <unistd.h>
+#include <string>
 
-int main()
+auto main(int, char* argv[]) -> int
 {
-	int liczba;
-	std::cin >> liczba;
-	for(int i=liczba; i>=0; i--)
+	auto const liczba = std::stoi(argv[1]);
+	for(auto i=liczba; i>=0; i--)
 	{
 		sleep(1);
 		std::cout << i <<"..."<<"\n";
